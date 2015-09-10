@@ -39,6 +39,7 @@ class DoublyLinkedList {
 		itemsCount = 0;
 	}
 	
+	// Add first node in doublyLinkedList
 	public void addToFirst(Object data) {
 		DoublyLinkedListItems newHead = new DoublyLinkedListItems(data);
 		if(head.getData() != null) {
@@ -50,6 +51,7 @@ class DoublyLinkedList {
 		itemsCount++;
 	}
 	
+	// Add last node in doublyLinkedList
 	public void addToLast(Object data) {
 		DoublyLinkedListItems newNode = new DoublyLinkedListItems(data);
 		DoublyLinkedListItems current = head;
@@ -62,6 +64,7 @@ class DoublyLinkedList {
 		itemsCount++;
 	}
 	
+	// Add node at desired position in doublyLinkedList
 	public void add(Object data, int index) {
 		if(index > 1 && index <= itemsCount) {
 			DoublyLinkedListItems current = head;
@@ -77,6 +80,7 @@ class DoublyLinkedList {
 		}
 	}
 	
+	// Remove first node in doublyLinkedList
 	public void removeFirst() {
 		DoublyLinkedListItems current = head;
 		if(current.getNext() != null) {
@@ -87,6 +91,7 @@ class DoublyLinkedList {
 		itemsCount--;
 	}
 	
+	// Remove last node in doublyLinkedList
 	public void removeLast() {
 		DoublyLinkedListItems current = head;
 		while(current.getNext().getNext() != null) {
@@ -96,6 +101,7 @@ class DoublyLinkedList {
 		itemsCount--;
 	}
 	
+	// Remove node at desired position in doublyLinkedList
 	public void remove(int index) {
 		if(index > 1 && index < itemsCount) {
 			DoublyLinkedListItems current = head;
@@ -108,6 +114,7 @@ class DoublyLinkedList {
 		}
 	}
 	
+	// Get node at position
 	public Object get(int index) {
 		if(index > 0 && index <= itemsCount) {
 			DoublyLinkedListItems current = head;
@@ -119,6 +126,7 @@ class DoublyLinkedList {
 		return "Error!";
 	}
 	
+	// Get length of doublyLinkedList
 	public int length() {
 		return itemsCount;
 	}
